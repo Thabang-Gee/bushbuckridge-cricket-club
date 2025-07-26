@@ -1,71 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF‑8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bushbuckridge Cricket Club</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Bushbuckridge Cricket Club Logo" class="logo">
-    <h1>Bushbuckridge Cricket Club</h1>
-  </header>
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <section class="hero">
-    <h2>Welcome to Bushbuckridge Cricket Club</h2>
-    <p>Representing proudly the Bucks of the Lowveld region, situated in Oakley.</p>
-  </section>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
 
-  <section class="about-us">
-    <h2>About Us</h2>
-    <p>
-      We are proudly the Bucks of the Lowveld region situated in Oakley, developing cricket under the guidance of our super coach,
-      <strong>J.V. Mokoena</strong>.
-    </p>
-  </section>
+/* Header */
+header {
+    background-color: #b40000; /* Deep red */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
-  <section class="latest-news">
-    <h2>Latest News</h2>
+header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
-    <article>
-      <h3>Exhibition Match vs UK Delegates</h3>
-      <p>On 27th January 2024, Bushbuckridge Cricket Club hosted an exhibition game at Acornhoek in front of a visiting British UK foundation.</p>
-      <a href="https://www.facebook.com/profile.php?id=100070892319155" target="_blank">Read more on Facebook</a>
-    </article>
+header .logo img {
+    width: 80px;
+    height: auto;
+}
 
-    <article>
-      <h3>Bushbuckridge Girls vs Penryn Girls</h3>
-      <p>Bushbuckridge College 1 Girls won by 8 wickets: Penryn 58/10 in 18.4 overs; BBRCC 59/2 in 7.4 overs. A great win!</p>
-      <a href="https://www.facebook.com/profile.php?id=100070892319155" target="_blank">See full post</a>
-    </article>
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+}
 
-    <article>
-      <h3>Bushbuckridge Girls vs Penryn College</h3>
-      <p>Bushbuckridge College 2 Girls also won by 8 wickets: Penryn College 92/4; BBRCC reached 93/2 in 11.2 overs.</p>
-      <a href="https://www.facebook.com/profile.php?id=100070892319155" target="_blank">More on Facebook</a>
-    </article>
+nav ul li {
+    margin: 0 15px;
+}
 
-    <p>For more updates, follow us on our <a href="https://www.facebook.com/profile.php?id=100070892319155" target="_blank">Facebook page</a>.</p>
-  </section>
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-  <section class="gallery">
-    <h2>Gallery Highlights</h2>
-    <div class="gallery-grid">
-      <img src="pic1.jpg" alt="Match Day">
-      <img src="pic2.jpg" alt="Team Huddle">
-      <img src="pic3.jpg" alt="Bowling Action">
-    </div>
-  </section>
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Coach &amp; Club Contact: <strong>J.V. Mokoena</strong> – 076 881 2006</p>
-    <p>Find us on <a href="https://www.facebook.com/profile.php?id=100070892319155" target="_blank">Facebook</a>.</p>
-  </section>
+/* Hero Section */
+.hero {
+    background-color: #fcecec; /* Soft red tint */
+    padding: 60px 20px;
+    text-align: center;
+}
 
-  <footer>
-    <p>&copy; 2025 Bushbuckridge Cricket Club | All Rights Reserved</p>
-  </footer>
-</body>
-</html>
+.hero h2 {
+    color: #b40000;
+    margin-bottom: 10px;
+}
+
+/* News Section */
+.latest-news {
+    padding: 40px 20px;
+}
+
+.latest-news h2 {
+    color: #b40000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.news-grid article {
+    background-color: #fff3f3;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.news-grid article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.news-grid article h3 {
+    margin: 15px 0 10px;
+    color: #b40000;
+}
+
+.news-grid article a {
+    text-decoration: none;
+    color: #b40000;
+    font-weight: bold;
+}
+
+/* Fixtures Section (Now About Us) */
+.fixtures {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.fixtures h2 {
+    color: #b40000;
+    margin-bottom: 20px;
+}
+
+.fixtures ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.fixtures ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.view-all {
+    color: white;
+    background-color: #b40000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.view-all:hover {
+    background-color: #900000;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #b71c1c;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+/* Full News Page Styling */
+.news-page {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.news-page h2 {
+    color: #b40000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news-item {
+    background-color: #fff3f3;
+    border-left: 4px solid #b40000;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.news-item h3 {
+    color: #b40000;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    margin-bottom: 5px;
+}
+
+.news-item .date {
+    font-size: 0.9rem;
+    color: #777;
+}
